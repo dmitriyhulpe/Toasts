@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+.button
+{
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    color: #fff;
+    background-color: #21262b;
+
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+@media(max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+}

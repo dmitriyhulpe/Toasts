@@ -1,0 +1,99 @@
+#toast {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+}
+
+.toast {
+    background: #fff;
+    box-shadow: rgba(100, 100, 110, 0.25) 0px 5px 30px 0px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 7.5px;
+    border-left: 5px solid;
+}
+
+.toast div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toast + .toast {
+    margin-top: 20px;
+}
+
+.toast.message {
+    border-color: #21262b;
+}
+
+.toast.message .title {
+    color: #21262b;
+}
+
+.toast.message .close {
+    color: #21262b;
+}
+
+.toast.success {
+    border-color: #20bdff;
+}
+
+.toast.success .title {
+    color: #20bdff;
+}
+
+.toast.success .close{
+    color: #20bdff;
+}
+
+.toast.error {
+    border-color: #f85032;
+}
+
+.toast.error .title {
+    color: #f85032;
+}
+
+.toast.error .close{
+    color: #f85032;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translate(calc(100% + 25px), 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes out {
+    from {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(calc(100% + 25px), 0);
+    }
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.close {
+    font-size: 20px;
+    cursor: pointer;
+}
